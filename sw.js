@@ -1,6 +1,6 @@
 // Offline support: the app shell is cached so it opens with no signal at all.
 // Bump CACHE when you change any file.
-const CACHE = 'pantry-v1';
+const CACHE = 'pantry-v2';
 
 const SHELL = [
   './',
@@ -22,6 +22,10 @@ const SHELL = [
   'js/views/cook.js',
   'assets/icon.svg',
   'assets/icon-maskable.svg',
+  'assets/icon-180.png',
+  'assets/icon-192.png',
+  'assets/icon-512.png',
+  'assets/icon-maskable-512.png',
 ];
 
 self.addEventListener('install', e => {

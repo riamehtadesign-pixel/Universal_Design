@@ -45,9 +45,36 @@ python3 -m http.server 8080
 (Open `index.html` straight off disk and ES modules and the service worker are blocked by
 the browser, so use a server — even a local one.)
 
-**On your phone:** put these files on any static host (GitHub Pages works — push this
-branch and turn on Pages for the repo root), open the URL, then *Add to Home Screen*.
-After the first load it runs offline.
+## Get it on your phone as an app
+
+**1. Turn on GitHub Pages** (once, ~1 minute to build):
+
+> repo **Settings** → **Pages** → Source: **Deploy from a branch** →
+> Branch: `claude/pantry-recipe-generator-fej5qy`, folder `/ (root)` → **Save**
+
+Your app is then live at:
+
+```
+https://riamehtadesign-pixel.github.io/Universal_Design/
+```
+
+**2. Add it to your home screen:**
+
+- **iPhone (Safari):** open the link → Share ⎋ → *Add to Home Screen* → Add.
+- **Android (Chrome):** open the link → ⋮ menu → *Install app* / *Add to Home Screen*.
+
+It then opens full-screen with no browser bars, keeps your shelf between sessions, and
+works with no signal once it has loaded once. Nothing to install from a store, and no
+account.
+
+**Updating it later:** push to the same branch; Pages redeploys in about a minute. The app
+picks up the new version the next time you open it (bump `CACHE` in `sw.js` when you change
+files, so the old cached copy is thrown away).
+
+**Just testing on your laptop?** `python3 -m http.server 8080` and open
+`http://localhost:8080`. Over your wifi from a phone (`http://<laptop-ip>:8080`) the app
+works, but browsers block service workers on plain http, so offline mode won't kick in —
+use the Pages URL for the real thing.
 
 ## Your data
 
