@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Pantry — what can I cook?</title>
+  <meta name="description" content="Log what's on your shelf, press I'm Hungry, get quick recipes with pans, timings and steps." />
+  <meta name="theme-color" content="#f4511e" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/icon.svg" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Pantry" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <div id="app">
+    <header id="topbar">
+      <div class="topbar-in">
+        <h1 id="title">Pantry</h1>
+        <div id="topbar-actions"></div>
+      </div>
+    </header>
+
+    <main id="screen" tabindex="-1"></main>
+
+    <nav id="tabbar" aria-label="Main">
+      <button data-tab="home" class="tab is-on"><span class="tab-i">🍳</span><span>Cook</span></button>
+      <button data-tab="shelf" class="tab"><span class="tab-i">🧺</span><span>Shelf</span></button>
+      <button data-tab="list" class="tab"><span class="tab-i">🛒</span><span>Buy</span></button>
+      <button data-tab="kitchen" class="tab"><span class="tab-i">⚙️</span><span>Kitchen</span></button>
+    </nav>
+  </div>
+
+  <div id="cook" class="cook" hidden aria-live="polite"></div>
+  <div id="toast" class="toast" hidden></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

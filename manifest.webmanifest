@@ -1,0 +1,15 @@
+{
+  "name": "Pantry — what can I cook?",
+  "short_name": "Pantry",
+  "description": "Log what is on your shelf, press I'm Hungry, cook along with timed steps.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fdf8f4",
+  "theme_color": "#f4511e",
+  "icons": [
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/icon-maskable.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}
